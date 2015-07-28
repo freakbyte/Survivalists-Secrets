@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Component xmlns="http://www.red5studios.com/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.red5studios.com/ ../../../schemas/component.xsd">
+	<Info
+		title="Survivalists Secrets"
+		author="freakbyte"
+		description="Not very descriptive"
+		url="http://freakbyte.me"
+		uiVersion="1000"
+	/>
+
+	<Events>
+		<Event name="ON_COMPONENT_LOAD" bind="freak"/>
+		<Event name="ON_PLAYER_READY" bind="freak" />
+		<Event name="ON_STREAM_PROGRESS" bind="freak" />
+		
+		<Event name="ON_UI_ENTITY_AVAILABLE" bind="freak"/>
+		<Event name="ON_UI_ENTITY_LOST" bind="freak"/>
+		<event name="ON_UI_ENTITY_FOCUS" bind="freak"/>
+		
+		<event name="ON_HEALTH_CHANGED" bind="freak"/>
+		<event name="ON_WEAPON_STATE_CHANGED" bind="freak"/>
+		<event name="ON_ABILITIES_CHANGED" bind="freak"/>
+		
+		<event name="ON_RESOURCE_SCAN_REPORT" bind="freak"/>
+		<event name="ON_RESOURCE_SCAN_FAILED" bind="freak"/>
+		
+		<event name="ON_ENERGY_CHANGED" bind="freak"/>
+		<event name="ON_REVIVE_END" bind="freak"/>
+		<Event name="MY_SLASH_HANDLER"	bind="freak"/>
+		<Event name="MY_HUD_SHOW"	bind="freak"/>
+		<Event name="ON_ITEM_SEARCH_COMPLETED"	bind="freak"/>
+		
+		<Event name="LIBGLOW" bind="libglow"/>
+		
+	</Events>
+	
+	<Frames>
+		<HudFrame name="statusFrame" dimensions="top:100%-92; left:50%-54; width:160; height:60;" visible="true" dragable = "false" depth="0">
+			<Children>		
+				<Text id="health" dimensions="width: 30; height: 30;" style="font:Demi_17; clip:true; bgcolor:00FFFFFF; drop-shadow:true;"/>
+				<Text id="ammo" dimensions="width: 30; height: 30;" style="font:Demi_17; clip:true; bgcolor:00FFFFFF; drop-shadow:true;"/> 
+				<Text id="energy" dimensions="width: 30; height: 30;" style="font:Demi_17; clip:true; bgcolor:00FFFFFF; drop-shadow:true;"/> 
+				<Text id="sonic" dimensions="width: 30; height: 30;" style="font:Demi_17; clip:true; bgcolor:00FFFFFF; drop-shadow:true;"/> 
+				<Text id="hammer" dimensions="width: 30; height: 30;" style="font:Demi_17; clip:true; bgcolor:00FFFFFF; drop-shadow:true;"/> 
+				<Text id="thumper" dimensions="width: 30; height: 30;" style="font:Demi_17; clip:true; bgcolor:00FFFFFF; drop-shadow:true;"/>
+				<Text id="cooldown" dimensions="width: 100; height: 30; top: 18; left: 4;" style="font:Demi_9; clip:true; bgcolor:00FFFFFF; color:AAFFFFFF; drop-shadow:true; halign:center;"/> 
+            </Children>
+        </HudFrame>
+    </Frames>
+	
+</Component>
